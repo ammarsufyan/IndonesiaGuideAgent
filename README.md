@@ -29,9 +29,6 @@ git clone https://github.com/ammarsufyan/IndonesiaGuideAgent.git
 cd IndonesiaGuideAgent
 
 python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS / Linux
 source .venv/bin/activate
 
 pip install -r requirements.txt
@@ -78,8 +75,6 @@ adk run IndonesiaGuideAgent
 | `google-adk` | 1.14.0 | Agent framework (Agent, SequentialAgent, LangchainTool) |
 | `langchain-community` | 0.3.27 | WikipediaQueryRun + WikipediaAPIWrapper |
 | `wikipedia` | 1.4.0 | Wikipedia API backend for LangChain |
-
-Additional implicit dependencies: `google-cloud-logging`, `python-dotenv`.
 
 ## License
 
