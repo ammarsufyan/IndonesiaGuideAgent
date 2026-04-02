@@ -42,12 +42,20 @@ pip install -r requirements.txt
 Create a `.env` file in the project root:
 
 ```env
-MODEL=gemini-2.0-flash
+PROJECT_ID=your-gcp-project-id
+PROJECT_NUMBER=your-gcp-project-number
+SA_NAME=your-service-account-name
+SERVICE_ACCOUNT=your-service-account@your-project.iam.gserviceaccount.com
+MODEL=gemini-2.5-flash
 ```
 
 | Variable | Description |
 |----------|-------------|
-| `MODEL` | Model identifier passed to Google ADK (e.g. `gemini-2.0-flash`) |
+| `PROJECT_ID` | Google Cloud project ID |
+| `PROJECT_NUMBER` | Google Cloud project number |
+| `SA_NAME` | Service account name used for Cloud Run deployment |
+| `SERVICE_ACCOUNT` | Full service account email (`name@project.iam.gserviceaccount.com`) |
+| `MODEL` | Model identifier passed to Google ADK (e.g. `gemini-2.5-flash`) |
 
 ## Running the Agent
 
@@ -61,20 +69,6 @@ Or run it via the ADK runner directly:
 
 ```bash
 adk run IndonesiaGuideAgent
-```
-
-The `root_agent` object (`tour_guide_greeter`) is the ADK entry point defined in `agent.py`.
-
-## Project Structure
-
-```
-IndonesiaGuideAgent/
-├── agent.py          # All agent and tool definitions
-├── __init__.py       # Package entry (re-exports agent module)
-├── requirements.txt  # Pinned Python dependencies
-├── .env              # Environment variables (not committed)
-├── .gitignore
-└── LICENSE           # MIT
 ```
 
 ## Dependencies
