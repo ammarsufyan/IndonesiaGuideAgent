@@ -26,7 +26,7 @@ User → tour_guide_greeter → indo_tour_workflow
 
 ```bash
 git clone https://github.com/ammarsufyan/IndonesiaGuideAgent.git
-cd IndonesiaGuideAgent
+cd indonesia_guide_agent
 
 python -m venv .venv
 source .venv/bin/activate
